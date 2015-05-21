@@ -1,0 +1,909 @@
+Archive member included because of file (symbol)
+
+c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-exit.o)
+                              c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/crt0.o (exit)
+c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-impure.o)
+                              c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-exit.o) (_global_impure_ptr)
+c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-init.o)
+                              c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/crt0.o (__libc_init_array)
+c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-memcpy.o)
+                              cmsis/src/startup_sam4e.o (memcpy)
+c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-memset.o)
+                              c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/crt0.o (memset)
+c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__call_atexit.o)
+                              c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-exit.o) (__call_exitprocs)
+c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-atexit.o)
+                              c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__call_atexit.o) (atexit)
+c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-fini.o)
+                              c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__call_atexit.o) (__libc_fini_array)
+c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__atexit.o)
+                              c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-atexit.o) (__register_exitproc)
+
+Allocating common symbols
+Common symbol       size              file
+
+base                0x4               GccApplication5.o
+tc_channel          0x4               GccApplication5.o
+mask                0x4               GccApplication5.o
+pf_uart             0x4               GccApplication5.o
+data                0x4               GccApplication5.o
+
+Discarded input sections
+
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/crti.o
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/crti.o
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/crti.o
+ .data          0x00000000        0x4 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/crtbegin.o
+ .text          0x00000000       0x74 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/crt0.o
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/crt0.o
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/crt0.o
+ .ARM.extab     0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/crt0.o
+ .ARM.exidx     0x00000000        0x8 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/crt0.o
+ .ARM.attributes
+                0x00000000       0x1c c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/crt0.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/startup_sam4e.o
+ .text          0x00000000        0x0 cmsis/src/startup_sam4e.o
+ .data          0x00000000        0x0 cmsis/src/startup_sam4e.o
+ .bss           0x00000000        0x0 cmsis/src/startup_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 cmsis/src/system_sam4e.o
+ .text          0x00000000        0x0 cmsis/src/system_sam4e.o
+ .bss           0x00000000        0x0 cmsis/src/system_sam4e.o
+ .text.SystemCoreClockUpdate
+                0x00000000       0xec cmsis/src/system_sam4e.o
+ .text.system_init_flash
+                0x00000000       0x74 cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000      0x868 cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000       0x16 cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000       0x44 cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000      0x209 cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000       0x27 cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000       0x3b cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000       0x2d cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000       0x42 cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000      0xd39 cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000      0x154 cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000      0x18b cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000      0xbeb cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000      0x531 cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000      0x196 cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000      0x11e cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000      0x407 cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000      0x53c cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000      0x106 cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000      0xa74 cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000       0x1c cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000      0x732 cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000      0x449 cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000       0xbe cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000     0x28ac cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000      0x82f cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000      0xad6 cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000       0x9a cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000       0x76 cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000      0x3cb cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000       0x64 cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000      0x378 cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000      0x6f8 cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000      0x6e8 cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000      0x373 cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000      0x29c cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000      0x2c8 cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000      0x6ad cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000       0x76 cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000      0x2e2 cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000       0x46 cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000      0x216 cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000      0x286 cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000       0x82 cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000       0xb8 cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000       0x52 cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000       0x88 cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000      0x1b6 cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000       0xac cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000       0xac cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000       0x94 cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000       0x94 cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000       0xdc cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000       0xdc cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000       0x7c cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000       0x40 cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000       0xee cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000       0x46 cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000       0x58 cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000       0xa6 cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000       0x82 cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000       0x16 cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000       0x22 cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000      0x18e cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000      0x15e cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000      0x15e cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000       0x1c cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000       0x2e cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000       0x22 cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000       0x1c cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000       0x52 cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000       0x10 cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000       0x1c cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000      0x23b cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000      0x8a4 cmsis/src/system_sam4e.o
+ .debug_macro   0x00000000      0x10e cmsis/src/system_sam4e.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .group         0x00000000        0x8 GccApplication5.o
+ .text          0x00000000        0x0 GccApplication5.o
+ .rodata        0x00000000    0x3c000 GccApplication5.o
+ .debug_macro   0x00000000      0x868 GccApplication5.o
+ .debug_macro   0x00000000       0x16 GccApplication5.o
+ .debug_macro   0x00000000       0x44 GccApplication5.o
+ .debug_macro   0x00000000      0x209 GccApplication5.o
+ .debug_macro   0x00000000       0x27 GccApplication5.o
+ .debug_macro   0x00000000       0x3b GccApplication5.o
+ .debug_macro   0x00000000       0x2d GccApplication5.o
+ .debug_macro   0x00000000       0x42 GccApplication5.o
+ .debug_macro   0x00000000      0xd39 GccApplication5.o
+ .debug_macro   0x00000000      0x154 GccApplication5.o
+ .debug_macro   0x00000000      0x18b GccApplication5.o
+ .debug_macro   0x00000000      0xbeb GccApplication5.o
+ .debug_macro   0x00000000      0x531 GccApplication5.o
+ .debug_macro   0x00000000      0x196 GccApplication5.o
+ .debug_macro   0x00000000      0x11e GccApplication5.o
+ .debug_macro   0x00000000      0x407 GccApplication5.o
+ .debug_macro   0x00000000      0x53c GccApplication5.o
+ .debug_macro   0x00000000      0x106 GccApplication5.o
+ .debug_macro   0x00000000      0xa74 GccApplication5.o
+ .debug_macro   0x00000000       0x1c GccApplication5.o
+ .debug_macro   0x00000000      0x732 GccApplication5.o
+ .debug_macro   0x00000000      0x449 GccApplication5.o
+ .debug_macro   0x00000000       0xbe GccApplication5.o
+ .debug_macro   0x00000000     0x28ac GccApplication5.o
+ .debug_macro   0x00000000      0x82f GccApplication5.o
+ .debug_macro   0x00000000      0xad6 GccApplication5.o
+ .debug_macro   0x00000000       0x9a GccApplication5.o
+ .debug_macro   0x00000000       0x76 GccApplication5.o
+ .debug_macro   0x00000000      0x3cb GccApplication5.o
+ .debug_macro   0x00000000       0x64 GccApplication5.o
+ .debug_macro   0x00000000      0x378 GccApplication5.o
+ .debug_macro   0x00000000      0x6f8 GccApplication5.o
+ .debug_macro   0x00000000      0x6e8 GccApplication5.o
+ .debug_macro   0x00000000      0x373 GccApplication5.o
+ .debug_macro   0x00000000      0x29c GccApplication5.o
+ .debug_macro   0x00000000      0x2c8 GccApplication5.o
+ .debug_macro   0x00000000      0x6ad GccApplication5.o
+ .debug_macro   0x00000000       0x76 GccApplication5.o
+ .debug_macro   0x00000000      0x2e2 GccApplication5.o
+ .debug_macro   0x00000000       0x46 GccApplication5.o
+ .debug_macro   0x00000000      0x216 GccApplication5.o
+ .debug_macro   0x00000000      0x286 GccApplication5.o
+ .debug_macro   0x00000000       0x82 GccApplication5.o
+ .debug_macro   0x00000000       0xb8 GccApplication5.o
+ .debug_macro   0x00000000       0x52 GccApplication5.o
+ .debug_macro   0x00000000       0x88 GccApplication5.o
+ .debug_macro   0x00000000      0x1b6 GccApplication5.o
+ .debug_macro   0x00000000       0xac GccApplication5.o
+ .debug_macro   0x00000000       0xac GccApplication5.o
+ .debug_macro   0x00000000       0x94 GccApplication5.o
+ .debug_macro   0x00000000       0x94 GccApplication5.o
+ .debug_macro   0x00000000       0xdc GccApplication5.o
+ .debug_macro   0x00000000       0xdc GccApplication5.o
+ .debug_macro   0x00000000       0x7c GccApplication5.o
+ .debug_macro   0x00000000       0x40 GccApplication5.o
+ .debug_macro   0x00000000       0xee GccApplication5.o
+ .debug_macro   0x00000000       0x46 GccApplication5.o
+ .debug_macro   0x00000000       0x58 GccApplication5.o
+ .debug_macro   0x00000000       0xa6 GccApplication5.o
+ .debug_macro   0x00000000       0x82 GccApplication5.o
+ .debug_macro   0x00000000       0x16 GccApplication5.o
+ .debug_macro   0x00000000       0x22 GccApplication5.o
+ .debug_macro   0x00000000      0x18e GccApplication5.o
+ .debug_macro   0x00000000      0x15e GccApplication5.o
+ .debug_macro   0x00000000      0x15e GccApplication5.o
+ .debug_macro   0x00000000       0x1c GccApplication5.o
+ .debug_macro   0x00000000       0x2e GccApplication5.o
+ .debug_macro   0x00000000       0x22 GccApplication5.o
+ .debug_macro   0x00000000       0x1c GccApplication5.o
+ .debug_macro   0x00000000       0x52 GccApplication5.o
+ .debug_macro   0x00000000       0x10 GccApplication5.o
+ .debug_macro   0x00000000       0x1c GccApplication5.o
+ .debug_macro   0x00000000      0x23b GccApplication5.o
+ .debug_macro   0x00000000      0x8a4 GccApplication5.o
+ .debug_macro   0x00000000      0x10e GccApplication5.o
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-exit.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-exit.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-exit.o)
+ .text.exit     0x00000000       0x20 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-exit.o)
+ .ARM.attributes
+                0x00000000       0x2e c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-exit.o)
+ .debug_frame   0x00000000       0x28 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-exit.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-impure.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-impure.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-impure.o)
+ .data._impure_ptr
+                0x00000000        0x4 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-impure.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-init.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-init.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-init.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-memcpy.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-memcpy.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-memset.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-memset.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-memset.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__call_atexit.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__call_atexit.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__call_atexit.o)
+ .text.__call_exitprocs
+                0x00000000       0xf0 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__call_atexit.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-atexit.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-atexit.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-atexit.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-fini.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-fini.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-fini.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__atexit.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__atexit.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__atexit.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/crtend.o
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/crtend.o
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/crtend.o
+ .eh_frame      0x00000000        0x4 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/crtend.o
+ .jcr           0x00000000        0x4 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/crtend.o
+ .ARM.attributes
+                0x00000000       0x2e c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/crtend.o
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/crtn.o
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/crtn.o
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+rom              0x00400000         0x00080000         xr
+ram              0x20000000         0x00020000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/crti.o
+LOAD c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/crtbegin.o
+LOAD c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/crt0.o
+LOAD cmsis/src/startup_sam4e.o
+LOAD cmsis/src/system_sam4e.o
+LOAD GccApplication5.o
+START GROUP
+LOAD c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libm.a
+END GROUP
+START GROUP
+LOAD c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m\libgcc.a
+LOAD c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a
+END GROUP
+LOAD c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/crtend.o
+LOAD c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/crtn.o
+                0x00000400                STACK_SIZE = DEFINED (STACK_SIZE)?STACK_SIZE:0x400
+                0x00000200                HEAP_SIZE = DEFINED (HEAP_SIZE)?HEAP_SIZE:0x200
+
+.text           0x00400000      0x798
+                0x00400000                . = ALIGN (0x4)
+                0x00400000                _sfixed = .
+ *(.vectors .vectors.*)
+ .vectors       0x00400000       0xf8 cmsis/src/startup_sam4e.o
+                0x00400000                exception_table
+ *(.text .text.* .gnu.linkonce.t.*)
+ .text          0x004000f8       0x54 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/crtbegin.o
+ .text.Dummy_Handler
+                0x0040014c        0x4 cmsis/src/startup_sam4e.o
+                0x0040014c                DACC_Handler
+                0x0040014c                DebugMon_Handler
+                0x0040014c                DMAC_Handler
+                0x0040014c                HardFault_Handler
+                0x0040014c                TC2_Handler
+                0x0040014c                SPI_Handler
+                0x0040014c                SysTick_Handler
+                0x0040014c                TWI1_Handler
+                0x0040014c                AFEC1_Handler
+                0x0040014c                PendSV_Handler
+                0x0040014c                NMI_Handler
+                0x0040014c                RTT_Handler
+                0x0040014c                PIOB_Handler
+                0x0040014c                RTC_Handler
+                0x0040014c                UsageFault_Handler
+                0x0040014c                WDT_Handler
+                0x0040014c                CAN0_Handler
+                0x0040014c                TC1_Handler
+                0x0040014c                HSMCI_Handler
+                0x0040014c                UART1_Handler
+                0x0040014c                ARM_Handler
+                0x0040014c                Dummy_Handler
+                0x0040014c                TWI0_Handler
+                0x0040014c                USART1_Handler
+                0x0040014c                PIOA_Handler
+                0x0040014c                AFEC0_Handler
+                0x0040014c                ACC_Handler
+                0x0040014c                PMC_Handler
+                0x0040014c                GMAC_Handler
+                0x0040014c                MemManage_Handler
+                0x0040014c                SUPC_Handler
+                0x0040014c                SVC_Handler
+                0x0040014c                EFC_Handler
+                0x0040014c                PIOD_Handler
+                0x0040014c                UDP_Handler
+                0x0040014c                BusFault_Handler
+                0x0040014c                RSTC_Handler
+                0x0040014c                AES_Handler
+ .text.Reset_Handler
+                0x00400150       0x78 cmsis/src/startup_sam4e.o
+                0x00400150                Reset_Handler
+ .text.SystemInit
+                0x004001c8       0x84 cmsis/src/system_sam4e.o
+                0x004001c8                SystemInit
+ .text.startup.main
+                0x0040024c      0x14c GccApplication5.o
+                0x0040024c                main
+ .text.PWM_Handler
+                0x00400398       0x28 GccApplication5.o
+                0x00400398                PWM_Handler
+ .text.TC0_Handler
+                0x004003c0       0x40 GccApplication5.o
+                0x004003c0                TC0_Handler
+ .text.UART0_Handler
+                0x00400400       0x3c GccApplication5.o
+                0x00400400                UART0_Handler
+ .text.USART0_Handler
+                0x0040043c       0x20 GccApplication5.o
+                0x0040043c                USART0_Handler
+ .text.__libc_init_array
+                0x0040045c       0x50 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-init.o)
+                0x0040045c                __libc_init_array
+ .text          0x004004ac      0x134 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-memcpy.o)
+                0x004004ac                memcpy
+ .text.memset   0x004005e0       0x94 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-memset.o)
+                0x004005e0                memset
+ .text.startup.register_fini
+                0x00400674       0x14 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__call_atexit.o)
+ .text.atexit   0x00400688        0xc c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-atexit.o)
+                0x00400688                atexit
+ .text.__libc_fini_array
+                0x00400694       0x30 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-fini.o)
+                0x00400694                __libc_fini_array
+ .text.__register_exitproc
+                0x004006c4       0xa8 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__atexit.o)
+                0x004006c4                __register_exitproc
+ *(.glue_7t)
+ .glue_7t       0x00000000        0x0 linker stubs
+ *(.glue_7)
+ .glue_7        0x00000000        0x0 linker stubs
+ *(.rodata .rodata* .gnu.linkonce.r.*)
+ .rodata.str1.4
+                0x0040076c        0x4 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-impure.o)
+ .rodata._global_impure_ptr
+                0x00400770        0x4 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-impure.o)
+                0x00400770                _global_impure_ptr
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+                0x00400774                . = ALIGN (0x4)
+ *(.init)
+ .init          0x00400774        0x4 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/crti.o
+                0x00400774                _init
+ .init          0x00400778        0x8 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/crtn.o
+                0x00400780                . = ALIGN (0x4)
+                0x00400780                __preinit_array_start = .
+ *(.preinit_array)
+                0x00400780                __preinit_array_end = .
+                0x00400780                . = ALIGN (0x4)
+                0x00400780                __init_array_start = .
+ *(SORT(.init_array.*))
+ .init_array.00000
+                0x00400780        0x4 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__call_atexit.o)
+ *(.init_array)
+ .init_array    0x00400784        0x4 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/crtbegin.o
+                0x00400788                __init_array_end = .
+                0x00400788                . = ALIGN (0x4)
+ *crtbegin.o(.ctors)
+ *(EXCLUDE_FILE(*crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *crtend.o(.ctors)
+                0x00400788                . = ALIGN (0x4)
+ *(.fini)
+ .fini          0x00400788        0x4 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/crti.o
+                0x00400788                _fini
+ .fini          0x0040078c        0x8 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/crtn.o
+                0x00400794                . = ALIGN (0x4)
+                0x00400794                __fini_array_start = .
+ *(.fini_array)
+ .fini_array    0x00400794        0x4 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/crtbegin.o
+ *(SORT(.fini_array.*))
+                0x00400798                __fini_array_end = .
+ *crtbegin.o(.dtors)
+ *(EXCLUDE_FILE(*crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *crtend.o(.dtors)
+                0x00400798                . = ALIGN (0x4)
+                0x00400798                _efixed = .
+                0x00400798                PROVIDE (__exidx_start, .)
+
+.vfp11_veneer   0x00400798        0x0
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+
+.v4_bx          0x00400798        0x0
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.iplt           0x00400798        0x0
+ .iplt          0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/crtbegin.o
+
+.eh_frame       0x00400798        0x0
+ .eh_frame      0x00400798        0x0 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/crtbegin.o
+
+.rel.dyn        0x00400798        0x0
+ .rel.iplt      0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/crtbegin.o
+
+.jcr            0x00400798        0x0
+ .jcr           0x00400798        0x0 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/crtbegin.o
+
+.igot.plt       0x00400798        0x0
+ .igot.plt      0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/crtbegin.o
+
+.ARM.exidx
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                0x00400798                PROVIDE (__exidx_end, .)
+                0x00400798                . = ALIGN (0x4)
+                0x00400798                _etext = .
+
+.relocate       0x20000000      0x468 load address 0x00400798
+                0x20000000                . = ALIGN (0x4)
+                0x20000000                _srelocate = .
+ *(.ramfunc .ramfunc.*)
+ *(.data .data.*)
+ .data          0x20000000        0x4 cmsis/src/system_sam4e.o
+                0x20000000                SystemCoreClock
+ .data          0x20000004       0x38 GccApplication5.o
+                0x20000004                p_pwm
+                0x20000008                buffer
+                0x20000028                buffer_usart
+ *fill*         0x2000003c        0x4 
+ .data.impure_data
+                0x20000040      0x428 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-impure.o)
+                0x20000468                . = ALIGN (0x4)
+                0x20000468                _erelocate = .
+
+.bss            0x20000468       0x34 load address 0x00400c00
+                0x20000468                . = ALIGN (0x4)
+                0x20000468                _sbss = .
+                0x20000468                _szero = .
+ *(.bss .bss.*)
+ .bss           0x20000468       0x1c c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/crtbegin.o
+ .bss           0x20000484        0x2 GccApplication5.o
+                0x20000485                c
+ *(COMMON)
+ *fill*         0x20000486        0x2 
+ COMMON         0x20000488       0x14 GccApplication5.o
+                0x20000488                base
+                0x2000048c                tc_channel
+                0x20000490                mask
+                0x20000494                pf_uart
+                0x20000498                data
+                0x2000049c                . = ALIGN (0x4)
+                0x2000049c                _ebss = .
+                0x2000049c                _ezero = .
+
+.stack          0x2000049c      0x404 load address 0x00400c34
+                0x200004a0                . = ALIGN (0x8)
+ *fill*         0x2000049c        0x4 
+                0x200004a0                _sstack = .
+                0x200008a0                . = (. + STACK_SIZE)
+ *fill*         0x200004a0      0x400 
+                0x200008a0                . = ALIGN (0x8)
+                0x200008a0                _estack = .
+
+.heap           0x200008a0      0x200 load address 0x00401038
+                0x200008a0                . = ALIGN (0x8)
+                0x200008a0                _sheap = .
+                0x20000aa0                . = (. + HEAP_SIZE)
+ *fill*         0x200008a0      0x200 
+                0x20000aa0                . = ALIGN (0x8)
+                0x20000aa0                _eheap = .
+                0x20000aa0                . = ALIGN (0x4)
+                0x20000aa0                _end = .
+                0x2001ffff                _ram_end_ = ((ORIGIN (ram) + 0x20000) - 0x1)
+OUTPUT(GccApplication5.elf elf32-littlearm)
+
+.ARM.attributes
+                0x00000000       0x2a
+ .ARM.attributes
+                0x00000000       0x1e c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/crti.o
+ .ARM.attributes
+                0x0000001e       0x2e c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/crtbegin.o
+ .ARM.attributes
+                0x0000004c       0x2f cmsis/src/startup_sam4e.o
+ .ARM.attributes
+                0x0000007b       0x2f cmsis/src/system_sam4e.o
+ .ARM.attributes
+                0x000000aa       0x2f GccApplication5.o
+ .ARM.attributes
+                0x000000d9       0x2e c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-impure.o)
+ .ARM.attributes
+                0x00000107       0x2e c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-init.o)
+ .ARM.attributes
+                0x00000135       0x1c c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-memcpy.o)
+ .ARM.attributes
+                0x00000151       0x2e c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-memset.o)
+ .ARM.attributes
+                0x0000017f       0x2e c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__call_atexit.o)
+ .ARM.attributes
+                0x000001ad       0x2e c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-atexit.o)
+ .ARM.attributes
+                0x000001db       0x2e c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-fini.o)
+ .ARM.attributes
+                0x00000209       0x2e c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__atexit.o)
+ .ARM.attributes
+                0x00000237       0x1e c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/crtn.o
+
+.comment        0x00000000       0x5b
+ .comment       0x00000000       0x5b cmsis/src/startup_sam4e.o
+                                 0x5c (size before relaxing)
+ .comment       0x00000000       0x5c cmsis/src/system_sam4e.o
+ .comment       0x00000000       0x5c GccApplication5.o
+
+.debug_info     0x00000000     0x273a
+ .debug_info    0x00000000      0x708 cmsis/src/startup_sam4e.o
+ .debug_info    0x00000708      0x4ab cmsis/src/system_sam4e.o
+ .debug_info    0x00000bb3     0x1b87 GccApplication5.o
+
+.debug_abbrev   0x00000000      0x4c8
+ .debug_abbrev  0x00000000      0x154 cmsis/src/startup_sam4e.o
+ .debug_abbrev  0x00000154       0xf5 cmsis/src/system_sam4e.o
+ .debug_abbrev  0x00000249      0x27f GccApplication5.o
+
+.debug_loc      0x00000000       0xad
+ .debug_loc     0x00000000       0x20 cmsis/src/startup_sam4e.o
+ .debug_loc     0x00000020       0x8d GccApplication5.o
+
+.debug_aranges  0x00000000       0x98
+ .debug_aranges
+                0x00000000       0x28 cmsis/src/startup_sam4e.o
+ .debug_aranges
+                0x00000028       0x30 cmsis/src/system_sam4e.o
+ .debug_aranges
+                0x00000058       0x40 GccApplication5.o
+
+.debug_ranges   0x00000000      0x148
+ .debug_ranges  0x00000000       0x18 cmsis/src/startup_sam4e.o
+ .debug_ranges  0x00000018       0x20 cmsis/src/system_sam4e.o
+ .debug_ranges  0x00000038      0x110 GccApplication5.o
+
+.debug_macro    0x00000000     0xe855
+ .debug_macro   0x00000000      0x31e cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000031e      0x868 cmsis/src/startup_sam4e.o
+ .debug_macro   0x00000b86       0x16 cmsis/src/startup_sam4e.o
+ .debug_macro   0x00000b9c       0x44 cmsis/src/startup_sam4e.o
+ .debug_macro   0x00000be0      0x209 cmsis/src/startup_sam4e.o
+ .debug_macro   0x00000de9       0x27 cmsis/src/startup_sam4e.o
+ .debug_macro   0x00000e10       0x3b cmsis/src/startup_sam4e.o
+ .debug_macro   0x00000e4b       0x2d cmsis/src/startup_sam4e.o
+ .debug_macro   0x00000e78       0x42 cmsis/src/startup_sam4e.o
+ .debug_macro   0x00000eba      0xd39 cmsis/src/startup_sam4e.o
+ .debug_macro   0x00001bf3      0x154 cmsis/src/startup_sam4e.o
+ .debug_macro   0x00001d47      0x18b cmsis/src/startup_sam4e.o
+ .debug_macro   0x00001ed2      0xbeb cmsis/src/startup_sam4e.o
+ .debug_macro   0x00002abd      0x531 cmsis/src/startup_sam4e.o
+ .debug_macro   0x00002fee      0x196 cmsis/src/startup_sam4e.o
+ .debug_macro   0x00003184      0x11e cmsis/src/startup_sam4e.o
+ .debug_macro   0x000032a2      0x407 cmsis/src/startup_sam4e.o
+ .debug_macro   0x000036a9      0x53c cmsis/src/startup_sam4e.o
+ .debug_macro   0x00003be5      0x106 cmsis/src/startup_sam4e.o
+ .debug_macro   0x00003ceb      0xa74 cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000475f       0x1c cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000477b      0x732 cmsis/src/startup_sam4e.o
+ .debug_macro   0x00004ead      0x449 cmsis/src/startup_sam4e.o
+ .debug_macro   0x000052f6       0xbe cmsis/src/startup_sam4e.o
+ .debug_macro   0x000053b4     0x28ac cmsis/src/startup_sam4e.o
+ .debug_macro   0x00007c60      0x82f cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000848f      0xad6 cmsis/src/startup_sam4e.o
+ .debug_macro   0x00008f65       0x9a cmsis/src/startup_sam4e.o
+ .debug_macro   0x00008fff       0x76 cmsis/src/startup_sam4e.o
+ .debug_macro   0x00009075      0x3cb cmsis/src/startup_sam4e.o
+ .debug_macro   0x00009440       0x64 cmsis/src/startup_sam4e.o
+ .debug_macro   0x000094a4      0x378 cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000981c      0x6f8 cmsis/src/startup_sam4e.o
+ .debug_macro   0x00009f14      0x6e8 cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000a5fc      0x373 cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000a96f      0x29c cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000ac0b      0x2c8 cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000aed3      0x6ad cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000b580       0x76 cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000b5f6      0x2e2 cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000b8d8       0x46 cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000b91e      0x216 cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000bb34      0x286 cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000bdba       0x82 cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000be3c       0xb8 cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000bef4       0x52 cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000bf46       0x88 cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000bfce      0x1b6 cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000c184       0xac cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000c230       0xac cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000c2dc       0x94 cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000c370       0x94 cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000c404       0xdc cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000c4e0       0xdc cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000c5bc       0x7c cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000c638       0x40 cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000c678       0xee cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000c766       0x46 cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000c7ac       0x58 cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000c804       0xa6 cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000c8aa       0x82 cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000c92c       0x16 cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000c942       0x22 cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000c964      0x18e cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000caf2      0x15e cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000cc50      0x15e cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000cdae       0x1c cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000cdca       0x2e cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000cdf8       0x22 cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000ce1a       0x1c cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000ce36       0x52 cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000ce88       0x10 cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000ce98       0x1c cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000ceb4      0x23b cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000d0ef      0x8a4 cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000d993      0x10e cmsis/src/startup_sam4e.o
+ .debug_macro   0x0000daa1      0x330 cmsis/src/system_sam4e.o
+ .debug_macro   0x0000ddd1      0x3e2 GccApplication5.o
+ .debug_macro   0x0000e1b3       0x58 GccApplication5.o
+ .debug_macro   0x0000e20b       0x35 GccApplication5.o
+ .debug_macro   0x0000e240       0xa3 GccApplication5.o
+ .debug_macro   0x0000e2e3      0x166 GccApplication5.o
+ .debug_macro   0x0000e449       0x52 GccApplication5.o
+ .debug_macro   0x0000e49b       0x16 GccApplication5.o
+ .debug_macro   0x0000e4b1       0x43 GccApplication5.o
+ .debug_macro   0x0000e4f4      0x180 GccApplication5.o
+ .debug_macro   0x0000e674      0x1e1 GccApplication5.o
+
+.debug_line     0x00000000     0x18a7
+ .debug_line    0x00000000      0x788 cmsis/src/startup_sam4e.o
+ .debug_line    0x00000788      0x7fa cmsis/src/system_sam4e.o
+ .debug_line    0x00000f82      0x925 GccApplication5.o
+
+.debug_str      0x00000000    0x47409
+ .debug_str     0x00000000    0x4456d cmsis/src/startup_sam4e.o
+                              0x44872 (size before relaxing)
+ .debug_str     0x0004456d      0x2e1 cmsis/src/system_sam4e.o
+                              0x44664 (size before relaxing)
+ .debug_str     0x0004484e     0x2bbb GccApplication5.o
+                              0x47181 (size before relaxing)
+
+.debug_frame    0x00000000      0x214
+ .debug_frame   0x00000000       0x38 cmsis/src/startup_sam4e.o
+ .debug_frame   0x00000038       0x40 cmsis/src/system_sam4e.o
+ .debug_frame   0x00000078       0x80 GccApplication5.o
+ .debug_frame   0x000000f8       0x2c c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-init.o)
+ .debug_frame   0x00000124       0x2c c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-memset.o)
+ .debug_frame   0x00000150       0x48 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__call_atexit.o)
+ .debug_frame   0x00000198       0x20 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-atexit.o)
+ .debug_frame   0x000001b8       0x2c c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-fini.o)
+ .debug_frame   0x000001e4       0x30 c:/program files (x86)/atmel/atmel toolchain/arm gcc/native/4.8.1437/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__atexit.o)
