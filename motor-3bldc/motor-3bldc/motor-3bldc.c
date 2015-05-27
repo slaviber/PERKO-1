@@ -46,14 +46,14 @@ int main(void)
 	// START the timer with no prescaler
 	TCCR0A = _BV(COM0A1) | (1<<COM0B1) | _BV(WGM00);
 	TCCR0B |=  (1<<CS00);
-	OCR0A = 128; //current control; low val = low current [0-255]
+	OCR0A = 100; //current control; low val = low current [0-255]
 	OCR0B = 255; //turn motor off or on
 	
 		//TCCR0A |= (1<<COM0A1) | (1<<COM0A0) | (1<<WGM00);
 	
 	
-	
-	DDRD = 0b1111100; //PORTD5/6 FOR PWM
+	DDRD = 0b11111100;//PORTD5/6 FOR PWM; init oscillator
+	DDRD = 0b01111100; //PORTD5/6 FOR PWM; start oscillator
 	//DDRC = 56;
 	DDRB = 0b111;
 	
@@ -89,10 +89,12 @@ int main(void)
 }
 int g = 0;
 
-double freq = 40;
+double freq = 30;
 
 ISR(TIMER1_COMPA_vect)
 {
+	PORTD = numd[curr];
+	PORTB = numb[curr];
 	++g;
 	g = g%10;
 	if(!g){
@@ -107,17 +109,13 @@ ISR(TIMER1_COMPA_vect)
 
 		OCR1A = 16000000L/((int)freq*10);
 		
-		if(freq > 100*6){
-			freq = 100*6; //1000 RPM
-			OCR0A = 60;
+		if(freq > 96*6){
+			freq = 96*6; //960RPM=16FPSW
+			OCR0A = 70;
 		}
 		
-	   // double f = OCR1A;
-		//f /= 1.001;
-		//OCR1A = (int)f;
-		//if(OCR1A < 30000){
-		//	OCR1A = 30000;
-		//}
+		
+
 		
 		
 		

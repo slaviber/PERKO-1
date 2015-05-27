@@ -98,15 +98,15 @@ int main(void)
 	//
 	//
 	//
-	//PMC->PMC_PCER0 = 1 << ID_TC0;
-	//tc_channel = TC0->TC_CHANNEL + 0;//TC0->TC_CHANNEL[0]
-	//tc_channel->TC_CCR = TC_CCR_CLKDIS;
-	//tc_channel->TC_IDR = 0xFFFFFFFF;
-	//tc_channel->TC_SR;
-	//tc_channel->TC_CMR = 0 | TC_CMR_CPCTRG;
-	//tc_channel->TC_IER = TC_IER_CPCS;
-	//tc_channel->TC_RC = 4687;
-	//tc_channel->TC_CCR = TC_CCR_CLKEN | TC_CCR_SWTRG;
+	PMC->PMC_PCER0 = 1 << ID_TC0;
+	tc_channel = TC0->TC_CHANNEL + 0;//TC0->TC_CHANNEL[0]
+	tc_channel->TC_CCR = TC_CCR_CLKDIS;
+	tc_channel->TC_IDR = 0xFFFFFFFF;
+	tc_channel->TC_SR;
+	tc_channel->TC_CMR = 0 | TC_CMR_CPCTRG;
+	tc_channel->TC_IER = TC_IER_CPCS;
+	tc_channel->TC_RC = 4002365;
+	tc_channel->TC_CCR = TC_CCR_CLKEN | TC_CCR_SWTRG;
 	
 	
 	
@@ -258,18 +258,18 @@ int main(void)
 	
 	NVIC_DisableIRQ(PWM_IRQn);
 	
-	//NVIC_ClearPendingIRQ(ID_TC0);
-	//NVIC_SetPriority(ID_TC0,2);
+	NVIC_ClearPendingIRQ(ID_TC0);
+	NVIC_SetPriority(ID_TC0,0);
 	//NVIC_ClearPendingIRQ(UART0_IRQn);
 	//NVIC_SetPriority(UART0_IRQn,1);
 	//NVIC_ClearPendingIRQ(USART0_IRQn);
 	//NVIC_SetPriority(USART0_IRQn,0);
-		//NVIC_EnableIRQ(ID_TC0);
+	NVIC_EnableIRQ(ID_TC0);
 	//NVIC_EnableIRQ(UART0_IRQn);
 	//NVIC_EnableIRQ(USART0_IRQn);
-	short num = 0;
-	char even = 0;
-	int a = 0;
+	//short num = 0;
+	//char even = 0;
+	//int a = 0;
 	
 		base->PIO_SODR = 1U << (OPA_EN & 0x1F); //enable output
 		base->PIO_CODR = 1U << (D_RW & 0x1F); //set to low for write
@@ -279,15 +279,18 @@ int main(void)
 		base->PIO_CODR = 1023; //reset output data
 		
 		
-	unsigned int i = 0;
-	unsigned int counter = 0;
-	unsigned int led = 0;
-	
-	while (1)
-	{
-		++counter;
-		counter %= 800;
-		if(!counter)++i;
+	//unsigned int i = 0;
+	//unsigned int counter = 0;
+	//unsigned int led = 0;
+	//
+	while(1){
+		
+	}
+	//while (1)
+	//{
+		//++counter;
+		//counter %= 800;
+		//if(!counter)++i;
 		//if(!i){
 		//	++led;
 		//	led %= 12;
@@ -351,81 +354,81 @@ int main(void)
 			//}
 		//}
 		//}
-		base->PIO_CODR = 1U << (ENABLE_H & 0x1F); //enable LED HIGH
-		base->PIO_CODR = 1U << (ENABLE_L & 0x1F); //enable LED LOW
-		
-		incr = 0;
-		for(int g = 0; g < 2; ++g){
-			for(int f = 0; f < 16; ++f){
-				
-				
-				signed int C = 235 - 16;
-				signed int D = 128 - 128;
-				signed int E = 128 - 128;
-				
-				//if(g == f)++f;
-
-				//data->PIO_CODR = 255;
-				//data->PIO_SODR = g | f<<4;
-
-				
-				//RED
-				base->PIO_CODR = 1U << (D_CS & 0x1F); //set CS to low when loading data
-				//base->PIO_CODR = 1023; //reset output data
-				//base->PIO_SODR = 260+(( 298 * C           + 409 * E + 128) >> 8)*2.89f; //set output data
-				base->PIO_ODSR = 260+(( 298 * C           + 409 * E + 128) >> 8)*2.89f;
-				base->PIO_SODR = 1U << (D_CS & 0x1F); //set CS to high and flush data
-				
-				//++f;
-				if(g == f)++f;
-
-				//data->PIO_CODR = 255;
-				//data->PIO_SODR = g | f<<4;
-				data->PIO_ODSR = g | f<<4;
-				
-				//GREEN
-				base->PIO_CODR = 1U << (D_CS & 0x1F); //set CS to low when loading data
-				//base->PIO_CODR = 1023; //reset output data
-				//base->PIO_SODR = 315+(( 298 * C - 100 * D - 208 * E + 128) >> 8)*1.11f; //set output data
-				base->PIO_ODSR = 315+(( 298 * C - 100 * D - 208 * E + 128) >> 8)*1.11f;
-				base->PIO_SODR = 1U << (D_CS & 0x1F); //set CS to high and flush data
-				
-				++f;
-				if(g == f)++f;
-				
-				//data->PIO_CODR = 255;
-				//data->PIO_SODR = g | f<<4;
-				data->PIO_ODSR = g | f<<4;
-				
-				//BLUE
-				base->PIO_CODR = 1U << (D_CS & 0x1F); //set CS to low when loading data
-				//base->PIO_CODR = 1023; //reset output data
-				//base->PIO_SODR = 350+(( 298 * C + 516 * D           + 128) >> 8)*1.36f; //set output data
-				base->PIO_ODSR = 350+(( 298 * C + 516 * D           + 128) >> 8)*1.36f;
-				base->PIO_SODR = 1U << (D_CS & 0x1F); //set CS to high and flush data
-				
-				++f;
-				if(g == f)++f;
-				
-				//data->PIO_CODR = 255;
-				//data->PIO_SODR = g | f<<4;
-				data->PIO_ODSR = g | f<<4;
-				
-				//RESET equal
-				base->PIO_CODR = 1U << (D_CS & 0x1F); //set CS to low when loading data
-				base->PIO_CODR = 1023; //reset output data
-				base->PIO_SODR = 1U << (D_CS & 0x1F); //set CS to high and flush data
-
+		//base->PIO_CODR = 1U << (ENABLE_H & 0x1F); //enable LED HIGH
+		//base->PIO_CODR = 1U << (ENABLE_L & 0x1F); //enable LED LOW
+		//
+		//incr = 0;
+		//for(int g = 0; g < 2; ++g){
+			//for(int f = 0; f < 16; ++f){
+				//
+				//
+				//signed int C = 235 - 16;
+				//signed int D = 128 - 128;
+				//signed int E = 128 - 128;
+				//
+				////if(g == f)++f;
+//
+				////data->PIO_CODR = 255;
+				////data->PIO_SODR = g | f<<4;
+//
+				//
 				////RED
 				//base->PIO_CODR = 1U << (D_CS & 0x1F); //set CS to low when loading data
-				//base->PIO_CODR = 1023; //reset output data
-				//base->PIO_SODR = buffer[indexes[0][incr++]]*4; //set output data
+				////base->PIO_CODR = 1023; //reset output data
+				////base->PIO_SODR = 260+(( 298 * C           + 409 * E + 128) >> 8)*2.89f; //set output data
+				//base->PIO_ODSR = 260+(( 298 * C           + 409 * E + 128) >> 8)*2.89f;
 				//base->PIO_SODR = 1U << (D_CS & 0x1F); //set CS to high and flush data
 				//
-				//data->PIO_CODR = 255;
-				//data->PIO_SODR = g | i<<4;
-			}
-		}
+				////++f;
+				//if(g == f)++f;
+//
+				////data->PIO_CODR = 255;
+				////data->PIO_SODR = g | f<<4;
+				//data->PIO_ODSR = g | f<<4;
+				//
+				////GREEN
+				//base->PIO_CODR = 1U << (D_CS & 0x1F); //set CS to low when loading data
+				////base->PIO_CODR = 1023; //reset output data
+				////base->PIO_SODR = 315+(( 298 * C - 100 * D - 208 * E + 128) >> 8)*1.11f; //set output data
+				//base->PIO_ODSR = 315+(( 298 * C - 100 * D - 208 * E + 128) >> 8)*1.11f;
+				//base->PIO_SODR = 1U << (D_CS & 0x1F); //set CS to high and flush data
+				//
+				//++f;
+				//if(g == f)++f;
+				//
+				////data->PIO_CODR = 255;
+				////data->PIO_SODR = g | f<<4;
+				//data->PIO_ODSR = g | f<<4;
+				//
+				////BLUE
+				//base->PIO_CODR = 1U << (D_CS & 0x1F); //set CS to low when loading data
+				////base->PIO_CODR = 1023; //reset output data
+				////base->PIO_SODR = 350+(( 298 * C + 516 * D           + 128) >> 8)*1.36f; //set output data
+				//base->PIO_ODSR = 350+(( 298 * C + 516 * D           + 128) >> 8)*1.36f;
+				//base->PIO_SODR = 1U << (D_CS & 0x1F); //set CS to high and flush data
+				//
+				//++f;
+				//if(g == f)++f;
+				//
+				////data->PIO_CODR = 255;
+				////data->PIO_SODR = g | f<<4;
+				//data->PIO_ODSR = g | f<<4;
+				//
+				////RESET equal
+				//base->PIO_CODR = 1U << (D_CS & 0x1F); //set CS to low when loading data
+				//base->PIO_CODR = 1023; //reset output data
+				//base->PIO_SODR = 1U << (D_CS & 0x1F); //set CS to high and flush data
+//
+				//////RED
+				////base->PIO_CODR = 1U << (D_CS & 0x1F); //set CS to low when loading data
+				////base->PIO_CODR = 1023; //reset output data
+				////base->PIO_SODR = buffer[indexes[0][incr++]]*4; //set output data
+				////base->PIO_SODR = 1U << (D_CS & 0x1F); //set CS to high and flush data
+				////
+				////data->PIO_CODR = 255;
+				////data->PIO_SODR = g | i<<4;
+			//}
+		//}
 
 				
 			//}
@@ -1970,7 +1973,7 @@ int main(void)
 		
 			
 			
-    }
+    //}
 	
 }
 
@@ -2021,14 +2024,543 @@ void PWM_Handler(void)
 void TC0_Handler(void){
 		(void)(tc_channel->TC_SR);
 		
-		c = !c;
+		//c = !c;
+		//
+		//if(!c){
+		//	base->PIO_CODR = mask;
+		//}
+		//else{
+		//	base->PIO_SODR = mask;
+		//}
+		base->PIO_CODR = 1U << (ENABLE_H & 0x1F); //enable LED HIGH
+		base->PIO_CODR = 1U << (ENABLE_L & 0x1F); //enable LED LOW
 		
-		if(!c){
-			base->PIO_CODR = mask;
+		incr = 0;
+		for(int g = 0; g < 2; ++g){
+			char first = 1;
+			for(int f = 0; f < 16; ++f){
+				
+				signed int C = 235 - 16;
+				signed int D = 128 - 128;
+				signed int E = 128 - 128;
+				
+
+				
+				//RED
+				base->PIO_CODR = 1U << (D_CS & 0x1F); //set CS to low when loading data
+				base->PIO_ODSR = 260+(( 298 * C           + 409 * E + 128) >> 8)*2.89f;
+				base->PIO_SODR = 1U << (D_CS & 0x1F); //set CS to high and flush data
+				
+				//++f;
+				if(g == f)++f;
+
+				data->PIO_ODSR = g | f<<4;
+				
+				if(first){
+					first = 0;
+					//wait for the current to swap
+					__asm("nop");
+					__asm("nop");
+					__asm("nop");
+					__asm("nop");
+					__asm("nop");
+					__asm("nop");
+					__asm("nop");
+					__asm("nop");
+					__asm("nop");
+					__asm("nop");
+					
+				}
+				
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+	
+				//GREEN
+				base->PIO_CODR = 1U << (D_CS & 0x1F); //set CS to low when loading data
+				base->PIO_ODSR = 315+(( 298 * C - 100 * D - 208 * E + 128) >> 8)*1.11f;
+				base->PIO_SODR = 1U << (D_CS & 0x1F); //set CS to high and flush data
+				
+				++f;
+				if(g == f)++f;
+				
+				data->PIO_ODSR = g | f<<4;
+				
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+				
+				//BLUE
+				base->PIO_CODR = 1U << (D_CS & 0x1F); //set CS to low when loading data
+				base->PIO_ODSR = 350+(( 298 * C + 516 * D           + 128) >> 8)*1.36f;
+				base->PIO_SODR = 1U << (D_CS & 0x1F); //set CS to high and flush data
+				
+				++f;
+				if(g == f)++f;
+				
+				data->PIO_ODSR = g | f<<4;
+				
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+__asm("nop");
+				
+				//RESET equal
+				base->PIO_CODR = 1U << (D_CS & 0x1F); //set CS to low when loading data
+				base->PIO_CODR = 1023; //reset output data
+				base->PIO_SODR = 1U << (D_CS & 0x1F); //set CS to high and flush data
+				
+			}
 		}
-		else{
-			base->PIO_SODR = mask;
-		}
+		
+		
+		
+		base->PIO_SODR = 1U << (ENABLE_H & 0x1F); //disable LED HIGH
+		base->PIO_SODR = 1U << (ENABLE_L & 0x1F); //disable LED LOW
+		
+		
+		
+		
 }
 
 void UART0_Handler(void)
