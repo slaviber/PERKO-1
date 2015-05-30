@@ -29,7 +29,8 @@ typedef unsigned char uchar;
 //uchar video_H[1000] = {5,5,5,5,5,5,5,5,5,5,5,5,5,5,5};
 //uchar video_L[31000] = {5,5,5,5,5,5,5,5,5,5,5,5,5,5,5};
 //#include "header.h"
-const unsigned short indexes[512][240] = {{0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30}};
+//const unsigned short indexes[512][240] = {{0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30}};
+#include "index.h"
 
 //const  uchar sine256[]  = {
 	//127,130,133,136,139,143,146,149,152,155,158,161,164,167,170,173,176,178,181,184,187,190,192,195,198,200,203,205,208,210,212,215,217,219,221,223,225,227,229,231,233,234,236,238,239,240,
@@ -105,8 +106,10 @@ int main(void)
 	tc_channel->TC_SR;
 	tc_channel->TC_CMR = 0 | TC_CMR_CPCTRG;
 	tc_channel->TC_IER = TC_IER_CPCS;
-	tc_channel->TC_RC = 4002365;
+	tc_channel->TC_RC = 7813;//4002365 //reg=4000280 (7813=reg/512) (32=reg/512/240)
 	tc_channel->TC_CCR = TC_CCR_CLKEN | TC_CCR_SWTRG;
+	
+	WDT->WDT_MR = WDT_MR_WDDIS;
 	
 	
 	
@@ -277,6 +280,9 @@ int main(void)
 		base->PIO_SODR = 1U << (ENABLE_H & 0x1F); //disable LED HIGH
 		base->PIO_SODR = 1U << (ENABLE_L & 0x1F); //disable LED LOW
 		base->PIO_CODR = 1023; //reset output data
+		
+		base->PIO_CODR = 1U << (ENABLE_H & 0x1F); //enable LED HIGH
+		base->PIO_CODR = 1U << (ENABLE_L & 0x1F); //enable LED LOW
 		
 		
 	//unsigned int i = 0;
@@ -2024,542 +2030,249 @@ void PWM_Handler(void)
 void TC0_Handler(void){
 		(void)(tc_channel->TC_SR);
 		
-		//c = !c;
+		//static int row = 0;
+		//static int pixel = 0;
+		//if(!pixel){
+			//++row;
+			//row %= 512;
+		//}
 		//
-		//if(!c){
-		//	base->PIO_CODR = mask;
-		//}
-		//else{
-		//	base->PIO_SODR = mask;
-		//}
-		base->PIO_CODR = 1U << (ENABLE_H & 0x1F); //enable LED HIGH
-		base->PIO_CODR = 1U << (ENABLE_L & 0x1F); //enable LED LOW
+		//++pixel;
+		//pixel %= 240;
 		
-		incr = 0;
-		for(int g = 0; g < 2; ++g){
-			char first = 1;
-			for(int f = 0; f < 16; ++f){
-				
-				signed int C = 235 - 16;
-				signed int D = 128 - 128;
-				signed int E = 128 - 128;
-				
 
-				
-				//RED
-				base->PIO_CODR = 1U << (D_CS & 0x1F); //set CS to low when loading data
-				base->PIO_ODSR = 260+(( 298 * C           + 409 * E + 128) >> 8)*2.89f;
-				base->PIO_SODR = 1U << (D_CS & 0x1F); //set CS to high and flush data
-				
-				//++f;
-				if(g == f)++f;
+		
+		
+		//static uint8_t n_pixel = 0;
+		//++n_pixel;
+		//if(n_pixel/16 == n_pixel%16)++n_pixel; //invalid bus combinations
+		
+		
+		
+		//base->PIO_CODR = 1U << (D_CS & 0x1F); //set CS to low when loading data
+		
+		//uint8_t Ydata = hbuf[led_index[row*80+pixel/3] + offset[row*80+pixel/3]];
+		//int16_t C = Ydata - 16;
+		//base->PIO_ODSR = ((298*C)>>8)*3.9; //B/W only
+		//if(row == 10)base->PIO_ODSR = 1023;
+		//else base->PIO_ODSR = 0;
+		
+		//base->PIO_SODR = 1U << (D_CS & 0x1F); //set CS to high and flush data
 
-				data->PIO_ODSR = g | f<<4;
-				
-				if(first){
-					first = 0;
-					//wait for the current to swap
-					__asm("nop");
-					__asm("nop");
-					__asm("nop");
-					__asm("nop");
-					__asm("nop");
-					__asm("nop");
-					__asm("nop");
-					__asm("nop");
-					__asm("nop");
-					__asm("nop");
-					
-				}
-				
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-	
-				//GREEN
-				base->PIO_CODR = 1U << (D_CS & 0x1F); //set CS to low when loading data
-				base->PIO_ODSR = 315+(( 298 * C - 100 * D - 208 * E + 128) >> 8)*1.11f;
-				base->PIO_SODR = 1U << (D_CS & 0x1F); //set CS to high and flush data
-				
-				++f;
-				if(g == f)++f;
-				
-				data->PIO_ODSR = g | f<<4;
-				
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-				
-				//BLUE
-				base->PIO_CODR = 1U << (D_CS & 0x1F); //set CS to low when loading data
-				base->PIO_ODSR = 350+(( 298 * C + 516 * D           + 128) >> 8)*1.36f;
-				base->PIO_SODR = 1U << (D_CS & 0x1F); //set CS to high and flush data
-				
-				++f;
-				if(g == f)++f;
-				
-				data->PIO_ODSR = g | f<<4;
-				
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-__asm("nop");
-				
-				//RESET equal
-				base->PIO_CODR = 1U << (D_CS & 0x1F); //set CS to low when loading data
-				base->PIO_CODR = 1023; //reset output data
-				base->PIO_SODR = 1U << (D_CS & 0x1F); //set CS to high and flush data
-				
-			}
+		//data->PIO_ODSR = (n_pixel/16) | (n_pixel%16)<<4;
+		
+		
+		
+		
+		
+		static int row = 0;
+		uint8_t n_pixel = 0;
+		for(int i = 0; i < 80; ++i){
+			
+			int pos = row*80+i;
+			int lind = led_index[pos];
+			
+			uint16_t Ydata = (hbuf[lind + offset[pos]] - 16)*298;
+			uint16_t Udata = hbuf[lind] - 128;
+			uint16_t Vdata = hbuf[lind+1] - 128;
+			
+			
+			base->PIO_CODR = 1U << (D_CS & 0x1F); //set CS to low when loading data
+			base->PIO_ODSR = (( Ydata           + 409 * Vdata + 128) >> 6);
+			base->PIO_SODR = 1U << (D_CS & 0x1F); //set CS to high and flush data
+			
+			++n_pixel;
+			if(n_pixel/16 == n_pixel%16)++n_pixel; //invalid bus combinations
+
+			data->PIO_ODSR = (n_pixel/16) | (n_pixel%16)<<4;
+			
+
+
+			base->PIO_CODR = 1U << (D_CS & 0x1F); //set CS to low when loading data
+			base->PIO_ODSR = (( Ydata - 100 * Udata - 208 * Vdata + 128) >> 6);
+			base->PIO_SODR = 1U << (D_CS & 0x1F); //set CS to high and flush data
+			
+			++n_pixel;
+			if(n_pixel/16 == n_pixel%16)++n_pixel; //invalid bus combinations
+
+			data->PIO_ODSR = (n_pixel/16) | (n_pixel%16)<<4;
+			
+			
+			
+			base->PIO_CODR = 1U << (D_CS & 0x1F); //set CS to low when loading data
+			base->PIO_ODSR = (( Ydata + 516 * Udata           + 128) >> 6);
+			base->PIO_SODR = 1U << (D_CS & 0x1F); //set CS to high and flush data
+			
+			++n_pixel;
+			if(n_pixel/16 == n_pixel%16)++n_pixel; //invalid bus combinations
+
+			data->PIO_ODSR = (n_pixel/16) | (n_pixel%16)<<4;
+			
+			base->PIO_CODR = 1U << (D_CS & 0x1F); //set CS to low when loading data
+			base->PIO_ODSR = 0; //reset
+			base->PIO_SODR = 1U << (D_CS & 0x1F); //set CS to high and flush data
+			
 		}
+		++row;
+		row %= 512;
 		
-		
-		
-		base->PIO_SODR = 1U << (ENABLE_H & 0x1F); //disable LED HIGH
-		base->PIO_SODR = 1U << (ENABLE_L & 0x1F); //disable LED LOW
-		
-		
-		
+		//static int row = 0;
+		//row++;
+		//row %= 512;
+		////c = !c;
+		////
+		////if(!c){
+		////	base->PIO_CODR = mask;
+		////}
+		////else{
+		////	base->PIO_SODR = mask;
+		////}
+		//base->PIO_CODR = 1U << (ENABLE_H & 0x1F); //enable LED HIGH
+		//base->PIO_CODR = 1U << (ENABLE_L & 0x1F); //enable LED LOW
+		//
+		//incr = 0;
+		//for(int g = 0; g < 2; ++g){
+			//char first = 1;
+			//for(int f = 0; f < 16; ++f){
+				//
+				//uint8_t R = row%255;
+				//uint8_t G = row%255;
+				//uint8_t B = row%255;
+				//
+				//uint8_t Y = ( (  66 * R + 129 * G +  25 * B + 128) >> 8) +  16;
+				//uint8_t U = ( ( -38 * R -  74 * G + 112 * B + 128) >> 8) + 128;
+				//uint8_t V = ( ( 112 * R -  94 * G -  18 * B + 128) >> 8) + 128;
+				//
+				//signed int C = Y - 16;
+				//signed int D = U - 128;
+				//signed int E = V - 128;
+				//
+//
+				//
+				////RED
+				//base->PIO_CODR = 1U << (D_CS & 0x1F); //set CS to low when loading data
+				//base->PIO_ODSR = (( 298 * C           + 409 * E + 128) >> 8)*4;
+				//base->PIO_SODR = 1U << (D_CS & 0x1F); //set CS to high and flush data
+				//
+				////++f;
+				//if(g == f)++f;
+//
+				//data->PIO_ODSR = g | f<<4;
+				//
+				//if(first){
+					//first = 0;
+					////wait for the current to swap
+					//__asm("nop");
+					//__asm("nop");
+					//__asm("nop");
+					//__asm("nop");
+					//__asm("nop");
+					//__asm("nop");
+					//__asm("nop");
+					//__asm("nop");
+					//__asm("nop");
+					//__asm("nop");
+					//
+				//}
+				//
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+	//
+				////GREEN
+				//base->PIO_CODR = 1U << (D_CS & 0x1F); //set CS to low when loading data
+				//base->PIO_ODSR = (( 298 * C - 100 * D - 208 * E + 128) >> 8)*4;
+				//base->PIO_SODR = 1U << (D_CS & 0x1F); //set CS to high and flush data
+				//
+				//++f;
+				//if(g == f)++f;
+				//
+				//data->PIO_ODSR = g | f<<4;
+				//
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+				//
+				////BLUE
+				//base->PIO_CODR = 1U << (D_CS & 0x1F); //set CS to low when loading data
+				//base->PIO_ODSR = (( 298 * C + 516 * D           + 128) >> 8)*4;
+				//base->PIO_SODR = 1U << (D_CS & 0x1F); //set CS to high and flush data
+				//
+				//++f;
+				//if(g == f)++f;
+				//
+				//data->PIO_ODSR = g | f<<4;
+				//
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+//__asm("nop");
+				//
+				////RESET equal
+				//base->PIO_CODR = 1U << (D_CS & 0x1F); //set CS to low when loading data
+				//base->PIO_CODR = 1023; //reset output data
+				//base->PIO_SODR = 1U << (D_CS & 0x1F); //set CS to high and flush data
+				//
+			//}
+		//}
+		//
+		//
+		//
+		////base->PIO_SODR = 1U << (ENABLE_H & 0x1F); //disable LED HIGH
+		////base->PIO_SODR = 1U << (ENABLE_L & 0x1F); //disable LED LOW
+		//
+		//
+		//
 		
 }
 
