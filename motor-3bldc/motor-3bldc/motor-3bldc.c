@@ -46,7 +46,7 @@ int main(void)
 	// START the timer with no prescaler
 	TCCR0A = _BV(COM0A1) | (1<<COM0B1) | _BV(WGM00);
 	TCCR0B |=  (1<<CS00);
-	OCR0A = 100; //current control; low val = low current [0-255]
+	OCR0A = 20; //current control; low val = low current [0-255]
 	OCR0B = 255; //turn motor off or on
 	
 		//TCCR0A |= (1<<COM0A1) | (1<<COM0A0) | (1<<WGM00);
@@ -93,8 +93,15 @@ double freq = 30;
 
 ISR(TIMER1_COMPA_vect)
 {
-	PORTD = numd[curr];
-	PORTB = numb[curr];
+	static int init = 0;
+	if(init < 500){
+		++init;
+		OCR1A = 65535;
+		PORTD = numd[curr];
+		PORTB = numb[curr];
+		if(init == 499)OCR0A = 100;
+		return;
+	}
 	++g;
 	g = g%10;
 	if(!g){

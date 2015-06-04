@@ -2062,51 +2062,165 @@ void TC0_Handler(void){
 		//data->PIO_ODSR = (n_pixel/16) | (n_pixel%16)<<4;
 		
 		
-		
-		
+		int16_t result;
 		
 		static int row = 0;
 		uint8_t n_pixel = 0;
+		
+		int last_line;
+		int curr_line;
+		
+		
+		
 		for(int i = 0; i < 80; ++i){
 			
 			int pos = row*80+i;
 			int lind = led_index[pos];
 			
-			uint16_t Ydata = (hbuf[lind + offset[pos]] - 16)*298;
-			uint16_t Udata = hbuf[lind] - 128;
-			uint16_t Vdata = hbuf[lind+1] - 128;
+			int32_t Ydata = (hbuf[lind + offset[pos]] - 16)*298;
+			int16_t Udata = hbuf[lind] - 128;
+			int16_t Vdata = hbuf[lind+1] - 128;
 			
 			
 			base->PIO_CODR = 1U << (D_CS & 0x1F); //set CS to low when loading data
-			base->PIO_ODSR = (( Ydata           + 409 * Vdata + 128) >> 6);
+			result = (( Ydata           + 409 * Vdata + 128) >> 6);
+			result = result < 0 ? 0 : result;
+			result = result > 1023 ? 1023 : result;
+			base->PIO_ODSR = result;
 			base->PIO_SODR = 1U << (D_CS & 0x1F); //set CS to high and flush data
 			
+			last_line = n_pixel/16;
 			++n_pixel;
 			if(n_pixel/16 == n_pixel%16)++n_pixel; //invalid bus combinations
-
-			data->PIO_ODSR = (n_pixel/16) | (n_pixel%16)<<4;
+			curr_line = n_pixel/16;
+			if(last_line != curr_line){ //current change
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+			}
+			data->PIO_ODSR = curr_line | (n_pixel%16)<<4;
+			
+			__asm("nop");
+			__asm("nop");
+			__asm("nop");
+			__asm("nop");
+			__asm("nop");
+			__asm("nop");
+			__asm("nop");
+			__asm("nop");
+			__asm("nop");
+			__asm("nop");
 			
 
 
 			base->PIO_CODR = 1U << (D_CS & 0x1F); //set CS to low when loading data
-			base->PIO_ODSR = (( Ydata - 100 * Udata - 208 * Vdata + 128) >> 6);
+			result = (( Ydata - 100 * Udata - 208 * Vdata + 128) >> 6);
+			result = result < 0 ? 0 : result;
+			result = result > 1023 ? 1023 : result;
+			base->PIO_ODSR = result;
 			base->PIO_SODR = 1U << (D_CS & 0x1F); //set CS to high and flush data
 			
+			last_line = n_pixel/16;
 			++n_pixel;
 			if(n_pixel/16 == n_pixel%16)++n_pixel; //invalid bus combinations
-
-			data->PIO_ODSR = (n_pixel/16) | (n_pixel%16)<<4;
+			curr_line = n_pixel/16;
+			if(last_line != curr_line){ //current change
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+			}
+			data->PIO_ODSR = curr_line | (n_pixel%16)<<4;
 			
-			
+			__asm("nop");
+			__asm("nop");
+			__asm("nop");
+			__asm("nop");
+			__asm("nop");
+			__asm("nop");
+			__asm("nop");
+			__asm("nop");
+			__asm("nop");
+			__asm("nop");
 			
 			base->PIO_CODR = 1U << (D_CS & 0x1F); //set CS to low when loading data
-			base->PIO_ODSR = (( Ydata + 516 * Udata           + 128) >> 6);
+			result = (( Ydata + 516 * Udata           + 128) >> 6);
+			result = result < 0 ? 0 : result;
+			result = result > 1023 ? 1023 : result;
+			base->PIO_ODSR = result;
 			base->PIO_SODR = 1U << (D_CS & 0x1F); //set CS to high and flush data
 			
+			last_line = n_pixel/16;
 			++n_pixel;
 			if(n_pixel/16 == n_pixel%16)++n_pixel; //invalid bus combinations
-
-			data->PIO_ODSR = (n_pixel/16) | (n_pixel%16)<<4;
+			curr_line = n_pixel/16;
+			if(last_line != curr_line){ //current change
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+				__asm("nop");
+			}
+			data->PIO_ODSR = curr_line | (n_pixel%16)<<4;
+			
+			__asm("nop");
+			__asm("nop");
+			__asm("nop");
+			__asm("nop");
+			__asm("nop");
+			__asm("nop");
+			__asm("nop");
+			__asm("nop");
+			__asm("nop");
+			__asm("nop");
 			
 			base->PIO_CODR = 1U << (D_CS & 0x1F); //set CS to low when loading data
 			base->PIO_ODSR = 0; //reset

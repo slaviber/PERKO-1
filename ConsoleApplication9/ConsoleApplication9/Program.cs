@@ -101,8 +101,8 @@ namespace ConsoleApplication9
                     for (int j = 0; j < 4; ++j)
                     {
                         int C = Y[j] - 16;
-                        int D = 128 - 128;
-                        int E = 128 - 128;
+                        int D = Umid - 128;
+                        int E = Vmid - 128;
                         int R = (298 * C + 409 * E + 128) >> 8;
                         int G = (298 * C - 100 * D - 208 * E + 128) >> 8;
                         int B = (298 * C + 516 * D + 128) >> 8;
@@ -116,8 +116,8 @@ namespace ConsoleApplication9
                         bmp.SetPixel(80 + i, a + j, Color.FromArgb(255, R, G, B));
 
                         C = Y2[j] - 16;
-                        D = 128 - 128;
-                        E = 128 - 128;
+                        D = Umid2 - 128;
+                        E = Vmid2 - 128;
                         R = (298 * C + 409 * E + 128) >> 8;
                         G = (298 * C - 100 * D - 208 * E + 128) >> 8;
                         B = (298 * C + 516 * D + 128) >> 8;
@@ -226,6 +226,17 @@ namespace ConsoleApplication9
             }
             file.WriteLine("};");
             file.Close();
+
+
+
+            //3660
+            Console.WriteLine(index.ElementAt(3660));
+            Console.WriteLine(pdata.ElementAt(16008));
+            Console.WriteLine(pdata.ElementAt(16009));
+            Console.WriteLine(pdata.ElementAt(16010));
+            Console.WriteLine(pdata.ElementAt(16011));
+            Console.WriteLine(pdata.ElementAt(16012));
+            Console.WriteLine(pdata.ElementAt(16013));
         }
     }
 }
